@@ -107,15 +107,18 @@
 
 // ---------- TASK 6 ---------------
 
-// let inputNum;
-// let total = 0;
+let inputNum;
+let total = 0;
 
 
-// do{ 
-//     inputNum = prompt("Введите числа и нажмите кнопку cancel...");
-//     (isNaN(inputNum) ? alert("Вводи только цифры!"):
-//     total += Number(inputNum));
-// }while(inputNum !== null);
-// alert(`Общая сумма чисел равна ${total}`);
+do{ 
+    inputNum = prompt("Введите числа и нажмите кнопку cancel...");
+
+    (isNaN(inputNum) ? alert("Вводи только цифры!"):
+
+    total += Number(inputNum));
+    
+}while(inputNum !== null);
+alert(`Общая сумма чисел равна ${total}`);
 
 // ----------------------------------------
