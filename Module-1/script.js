@@ -115,8 +115,8 @@
 //     inputNum = prompt("Введите числа и нажмите кнопку cancel...");
 
 //     (isNaN(inputNum) ? alert("Вводи только цифры!"):
-
 //     total += Number(inputNum));
+//     continue
 
 // }while(inputNum !== null);
 // alert(`Общая сумма чисел равна ${total}`);
