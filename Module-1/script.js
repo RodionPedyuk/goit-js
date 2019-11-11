@@ -66,21 +66,21 @@
 
 // ---------- TASK 5 ---------------
 
-// let countryChina = "Китай"; 
-// let countryChili = "Чили"; 
-// let countryAustralia = "Австралия"; 
-// let countryIndia = "Индия"; 
-// let countryJamaica = "Ямайка"; 
+// let countryChina = "Китай";
+// let countryChili = "Чили";
+// let countryAustralia = "Австралия";
+// let countryIndia = "Индия";
+// let countryJamaica = "Ямайка";
 
 // let priceChina = 100;
 // let priceChili = 250;
 // let priceAustralia = 170;
 // let priceIndia = 80;
-// let priceJamaica = 120; 
+// let priceJamaica = 120;
 
 // let message;
 
-// let userCountry = prompt("Введите страну доставки..."); 
+// let userCountry = prompt("Введите страну доставки...");
 // switch (userCountry!==null && userCountry.toLowerCase()) {
 //     case countryChina.toLowerCase(): message = `Доставка в ${countryChina} будет стоить ${priceChina} кредитов`;
 //     break;
@@ -110,8 +110,7 @@
 // let inputNum;
 // let total = 0;
 
-
-// do{ 
+// do{
 //     inputNum = prompt("Введите числа и нажмите кнопку cancel...");
 
 //     (isNaN(inputNum) ? alert("Вводи только цифры!"):
