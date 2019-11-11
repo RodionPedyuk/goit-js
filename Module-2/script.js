@@ -66,17 +66,17 @@
 
 // --------------TASK 5------------------
 
-// let str = prompt("Enter your sentence...");
+let str = prompt("Enter your sentence...").toLowerCase();
 
-// const checkForSpam = function(str) {
-//   if (str.indexOf("sale") >= 0 || str.indexOf("spam") >= 0) {
-//     console.log(true);
-//   } else {
-//     console.log(false);
-//   }
-// };
+const checkForSpam = function(str) {
+  if (str.indexOf("sale") >= 0 || str.indexOf("spam") >= 0) {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
+};
 
-// checkForSpam(str);
+checkForSpam(str);
 
 // ---------------------------------------
 
@@ -99,4 +99,3 @@
 //   total += num;
 // }
 // alert(`Общая сумма чисел равна ${total}`);
-
