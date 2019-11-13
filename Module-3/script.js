@@ -33,30 +33,33 @@
 // --------------------------------------
 // --------------TASK 3------------------
 
-// Напиши функцию findBestEmployee(employees), которая принимает объект сотрудников и возвращает имя самого продуктивного (который выполнил больше всех задач). Сотрудники и кол-во выполненых задач содержатся как свойства объекта в формате "имя":"кол-во задач".
+// const findBestEmployee = function(stats) {
+//   let bestWorker = 0;
+//   let name;
 
-// Вызовы функции для проверки работоспособности твоей реализации.
-const worker = {
-  ann: 29,
-  david: 35,
-  helen: 1,
-  lorence: 99
-};
-let bestWorker = 0;
-let name = "";
+//   const employees = Object.keys(stats);
 
-const findBestEmployee = function(employees) {
-  for (let employee in employees) {
-    if (bestWorker < employees[employee]) {
-      bestWorker = employees[employee];
-      name = employee;
-    }
-  }
-};
+//   for (const employee of employees) {
+//     if (bestWorker < stats[employee]) {
+//       bestWorker = stats[employee];
+//       name = employee;
+//     }
+//   }
+//   return {
+//     name,
+//     taskComplete: bestWorker
+//   };
+// };
 
-findBestEmployee(worker);
+// console.log(
+//   findBestEmployee({
+//     ann: 29,
+//     david: 35,
+//     helen: 1,
+//     lorence: 99
+//   })
+// ); // lorence
 
-// lorence
 // console.log(
 //   findBestEmployee({
 //     poly: 12,
@@ -140,3 +143,4 @@ findBestEmployee(worker);
 // };
 
 // console.log(calculateTotalPrice(products, "Радар")); // 5200
+
