@@ -42,43 +42,47 @@
 // ------------------------------------------
 // -------------------TASK 3-----------------
 
-// Напиши скрипт для создания галлереи изображений по массиву данных.
+// const images = [
+//   {
+//     url:
+//       "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+//     alt: "White and Black Long Fur Cat"
+//   },
+//   {
+//     url:
+//       "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+//     alt: "Orange and White Koi Fish Near Yellow Koi Fish"
+//   },
+//   {
+//     url:
+//       "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+//     alt: "Group of Horses Running"
+//   }
+// ];
 
-// В HTML есть список ul#gallery.
+// const galeryImages = document.querySelector("#gallery");
+// galeryImages.classList.add("flex");
+// images.forEach(item => {
+//   galeryImages.insertAdjacentHTML(
+//     "afterbegin",
+//     `<li><img src=${item.url} width="400px"></li>`
+//   );
+// });
 
-// <ul id="gallery"></ul>
-// Используй массив объектов images для создания тегов img вложенных в li. Для создания разметки используй шаблонные строки и insertAdjacentHTML().
+// ------------------------------------------
+// -------------------TASK 4-----------------
 
-// Все элементы галереи должны добавляться в DOM за одну операцию вставки.
-// Добавь минимальное оформление галереи флексбоксами или гридами через css-классы.
+// Счетчик состоит из спана и кнопок, которые должны увеличивать и уменьшать значение счетчика на 1.
 
-const images = [
-  {
-    url:
-      "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    alt: "White and Black Long Fur Cat"
-  },
-  {
-    url:
-      "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    alt: "Orange and White Koi Fish Near Yellow Koi Fish"
-  },
-  {
-    url:
-      "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    alt: "Group of Horses Running"
-  }
-];
+// Создай переменную counterValue в которой будет хранится текущее значение счетчика.
+// Создай функции increment и decrement для увеличения и уменьшения значения счетчика
+// Добавь слушатели кликов на кнопки, вызовы функций и обновление интерфейса
 
-const galeryImages = document.querySelector("#gallery");
-galeryImages.classList.add("flex");
-images.forEach(item => {
-  galeryImages.insertAdjacentHTML(
-    "afterbegin",
-    `<li><img src=${item.url} width="400px"></li>`
-  );
-  //   const createLi = document.createElement("li");
-  //   const createImg = document.createElement("img");
+const counterValue = document.querySelector("#value");
 
-  //   const galleries = galeryImages.insertAdjacentHTML("afterbegin", createLi);
-});
+console.log(counterValue);
+
+decrement.onclick = function() {
+  counterValue++;
+  console.log(counterValue);
+};
