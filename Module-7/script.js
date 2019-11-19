@@ -72,17 +72,60 @@
 // ------------------------------------------
 // -------------------TASK 4-----------------
 
-// Счетчик состоит из спана и кнопок, которые должны увеличивать и уменьшать значение счетчика на 1.
+// let counterValue = document.querySelector("#value");
+// const btnsDiv = document.querySelector("#counter");
+// const btnDecrement = btnsDiv.firstElementChild;
+// const btnIncrement = btnsDiv.lastElementChild;
 
-// Создай переменную counterValue в которой будет хранится текущее значение счетчика.
-// Создай функции increment и decrement для увеличения и уменьшения значения счетчика
-// Добавь слушатели кликов на кнопки, вызовы функций и обновление интерфейса
+// btnIncrement.addEventListener("click", () => {
+//   counterValue.innerText++;
+// });
 
-const counterValue = document.querySelector("#value");
+// btnDecrement.addEventListener("click", () => {
+//   counterValue.innerText--;
+// });
 
-console.log(counterValue);
+// ------------------------------------------
+// -------------------TASK 5-----------------
+// Напиши скрипт который, при наборе текста в инпуте input#name-input (событие input), подставляет его текущее значение в span#name-output. Если инпут пустой, в спане должна отображаться строка 'незнакомец'.
 
-decrement.onclick = function() {
-  counterValue++;
-  console.log(counterValue);
-};
+// const userInput = document.querySelector("#name-input");
+// const userOutput = document.querySelector("#name-output");
+
+// userInput.addEventListener("input", event => {
+//   const input = event.target.value;
+//   userOutput.textContent = input;
+// });
+
+// ------------------------------------------
+// -------------------TASK 6-----------------
+
+// const userInput = document.querySelector("#validation-input");
+// console.log("userInput :", userInput);
+// const inputMax = userInput.getAttribute("data-length");
+// console.log("inputMax :", inputMax);
+
+// userInput.addEventListener("blur", event => {
+//   let userInputValue = event.target.value;
+//   console.log(userInputValue);
+
+//   if (userInputValue.length === Number(inputMax)) {
+//     userInput.classList.add("valid");
+//     userInput.classList.remove("invalid");
+//   }
+//   if (userInputValue.length !== Number(inputMax)) {
+//     userInput.classList.add("invalid");
+//     userInput.classList.remove("valid");
+//   }
+// });
+
+// ------------------------------------------
+// -------------------TASK 7-----------------
+
+// const fontControl = document.querySelector("#font-size-control");
+// const textStyle = document.querySelector("#text");
+
+// fontControl.oninput = function() {
+//   textStyle.style.fontSize = `${fontControl.value}px`;
+// };
+
