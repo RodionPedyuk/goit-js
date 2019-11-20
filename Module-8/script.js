@@ -14,19 +14,17 @@ galeryUl.insertAdjacentHTML("afterbegin", li);
 
 galeryUl.addEventListener("click", event => {
   event.preventDefault();
-  const pointer = event.target;
-  if (pointer.nodeName === "IMG") {
+  if (event.target.nodeName === "IMG") {
     imageLightBox.classList.add("is-open");
-    lightBoxImage.setAttribute("src", pointer.dataset.source);
+    lightBoxImage.setAttribute("src", event.target.dataset.source);
   }
 });
 
 imageLightBox.addEventListener("click", event => {
-  const pointer = event.target;
   if (
-    pointer.nodeName === "BUTTON" ||
-    pointer.nodeName === "I" ||
-    pointer.nodeName !== "IMG"
+    event.target.nodeName === "BUTTON" ||
+    event.target.nodeName === "I" ||
+    event.target.nodeName !== "IMG"
   ) {
     imageLightBox.classList.remove("is-open");
     lightBoxImage.removeAttribute("src");
