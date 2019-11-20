@@ -33,8 +33,7 @@ imageLightBox.addEventListener("click", elem => {
   }
 });
 window.addEventListener("keydown", elem => {
-  const keys = elem.key;
-  if (keys === "Escape") {
+  if (elem.key === "Escape") {
     imageLightBox.classList.remove("is-open");
     lightBoxImage.removeAttribute("src");
   }
