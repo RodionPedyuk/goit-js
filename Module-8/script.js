@@ -12,17 +12,17 @@ images.forEach(elem => {
 });
 galeryUl.insertAdjacentHTML("afterbegin", li);
 
-galeryUl.addEventListener("click", elem => {
-  elem.preventDefault();
-  const pointer = elem.target;
+galeryUl.addEventListener("click", event => {
+  event.preventDefault();
+  const pointer = event.target;
   if (pointer.nodeName === "IMG") {
     imageLightBox.classList.add("is-open");
     lightBoxImage.setAttribute("src", pointer.dataset.source);
   }
 });
 
-imageLightBox.addEventListener("click", elem => {
-  const pointer = elem.target;
+imageLightBox.addEventListener("click", event => {
+  const pointer = event.target;
   if (
     pointer.nodeName === "BUTTON" ||
     pointer.nodeName === "I" ||
@@ -32,8 +32,8 @@ imageLightBox.addEventListener("click", elem => {
     lightBoxImage.removeAttribute("src");
   }
 });
-window.addEventListener("keydown", elem => {
-  if (elem.key === "Escape") {
+window.addEventListener("keydown", event => {
+  if (event.key === "Escape") {
     imageLightBox.classList.remove("is-open");
     lightBoxImage.removeAttribute("src");
   }
