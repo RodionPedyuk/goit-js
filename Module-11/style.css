@@ -1,0 +1,14 @@
+.timer {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  margin-left: 500px;
+  border: 3px solid black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.field {
+  margin-left: 10px;
+  margin-right: 10px;
+}
