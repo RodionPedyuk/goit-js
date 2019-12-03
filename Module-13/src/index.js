@@ -14,12 +14,17 @@ const state = {
   pageNumber: 1,
 };
 function getDataGlobal(searchValue, pageNumber) {
-  const data = getData(searchValue, pageNumber);
-  let card = template(data);
-  refs.gallery.insertAdjacentHTML('beforeend', card);
+  getData(searchValue, pageNumber)
+    .then(data => {
+      let string = template(data);
+      return string;
+    })
+    .then(string => refs.gallery.insertAdjacentHTML('beforeend', string));
 }
+
 refs.input.addEventListener('submit', e => {
   e.preventDefault();
+  console.log('checks');
   state.searchValue = e.target.query.value;
   state.pageNumber = 1;
   getDataGlobal(state.searchValue, state.pageNumber);
