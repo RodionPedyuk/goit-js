@@ -1,1 +1,25 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  list-style: none;
+  justify-content: space-around;
+}
 
+.img {
+  width: 380px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.inputs {
+  padding: 10px;
+  width: 250px;
+}
+
+.btn {
+  width: 150px;
+}

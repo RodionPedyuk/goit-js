@@ -1,5 +1,6 @@
 'use strict';
 
+import './styles.css';
 import getData from './fetchData.js';
 import template from './template.hbs';
 
@@ -14,12 +15,10 @@ const state = {
   pageNumber: 1,
 };
 function getDataGlobal(searchValue, pageNumber) {
-  getData(searchValue, pageNumber)
-    .then(data => {
-      let string = template(data);
-      return string;
-    })
-    .then(string => refs.gallery.insertAdjacentHTML('beforeend', string));
+  getData(searchValue, pageNumber).then(data => {
+    const cards = refs.gallery.insertAdjacentHTML('beforeend', template(data));
+    return cards;
+  });
 }
 
 refs.input.addEventListener('submit', e => {
@@ -32,5 +31,13 @@ refs.input.addEventListener('submit', e => {
 
 refs.btn.addEventListener('click', e => {
   state.pageNumber += 1;
-  getDataGlobal(state.searchValue, state.pageNumber);
+  getDataGlobal(state.searchValue, state.pageNumber)
+    .then(cards => refs.gallery.insertAdjacentHTML('beforeend', cards))
+    .then(() => {
+      const position = refs.btn.offsetTop;
+      window.scrollTo({
+        top: position,
+        behavior: 'smooth',
+      });
+    });
 });
